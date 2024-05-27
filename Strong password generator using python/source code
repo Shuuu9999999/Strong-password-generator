@@ -1,0 +1,13 @@
+import random
+import string
+def generate_password(length):
+ # Define the pool of characters to choose from
+    characters = string.ascii_letters + string.digits + string.punctuation
+
+ # Generate the password
+    password = ''.join(random.choice(characters) for i in range(length))
+
+    return password
+# Usage
+password = generate_password(12) # generates a 12-character password
+print(password)
